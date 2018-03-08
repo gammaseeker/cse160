@@ -1,10 +1,9 @@
 package lab4;
-import java.util.*;
 
-public class CheckerBoard {
+public class ProblemEight {
 
 	public static void main(String[] args) {
-		int[][] board = new int[8][8];
+		int[][] board = new int[3][3];
 		for(int i = 0; i < board.length; i++) {
 			for(int j = 0; j < board[i].length; j++) {
 				board[i][j] = (int)(Math.random() * 2);
@@ -18,7 +17,6 @@ public class CheckerBoard {
 			System.out.println("");
 		}
 		
-		//int[][] test = {{1, 1, 0}, {1, 0, 0}, {0, 0, 0}};
 		checkRows(board);
 		checkCol(board);
 		checkMajorDiag(board);

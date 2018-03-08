@@ -9,15 +9,17 @@ public class RunTime {
 			arr[i] = num;
 		}
 		int key = arr[(int)(Math.random()*100000)];
-		long startTime = System.currentTimeMillis();
+		long startTime = System.nanoTime();
 		linearSearch(arr, key);
-		long endTime = System.currentTimeMillis();
+		long endTime = System.nanoTime();
 		long executionTime = endTime - startTime;
+		System.out.println(executionTime);
 		
-		startTime = System.currentTimeMillis();
+		startTime = System.nanoTime();
 		binarySearch(arr, key);
-		endTime = System.currentTimeMillis();
+		endTime = System.nanoTime();
 		executionTime = endTime - startTime;
+		System.out.println(executionTime);
 	}
 	
 	public static int linearSearch(int[] arr, int key) {
